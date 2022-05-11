@@ -14,9 +14,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { DetailComponent } from './detail/detail.component';
 import { CreatecourseComponent } from './compenents/coursecomponents/createcourse/createcourse.component';
 import { ReadcourseComponent } from './compenents/coursecomponents/readcourse/readcourse.component';
-import { ChartsComponent } from './charts/charts.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FusionChartsModule } from "angular-fusioncharts";
+import { ChartComponent } from './chart/chart.component';
+
+
 
 
 @NgModule({
@@ -27,7 +29,7 @@ import { FusionChartsModule } from "angular-fusioncharts";
     DetailComponent,
     CreatecourseComponent,
     ReadcourseComponent,
-    ChartsComponent
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,9 @@ import { FusionChartsModule } from "angular-fusioncharts";
     Ng2OrderModule,
     NgxPaginationModule,
     NgChartsModule,
+    
+    
+   
  
 
 

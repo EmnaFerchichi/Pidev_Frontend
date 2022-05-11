@@ -109,17 +109,16 @@
         
     <table id="customers">
         <tr>
-          <th>Id Qcm</th>
-          <th>Description</th>
-          <th>Nbr Question</th>
+          <th >Id Qcm</th>
+          <th >Description</th>
+          <th >Nbr Question</th>
           <th>Points</th>
-          <th>Title</th>
-          <th>Mark</th>
-          <th>Edits</th>
+          <th >Title</th>
+          <th >Mark</th>
           
         </tr>
         <tbody>
-           <tr *ngFor="let us of readData |filter:searchText ">
+           <tr *ngFor="let us of readData |filter:searchText | paginate:{itemsPerPage:tableSize,currentPage:page,totalItems:count}; let i=index ">
                   
                 <th >{{us.id_qcm}}</th>
                 <td>{{us.description}}</td>
@@ -140,5 +139,13 @@
     </tbody>
         
       </table>
+      <div >
+        
+       
+        <pagination-controls previousLabel="Prev" NextLabel="Next" (pageChange)="onTableDataChange($event)" ></pagination-controls>
+     
+        
+
+      </div>
       
 </div>

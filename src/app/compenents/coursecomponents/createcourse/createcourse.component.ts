@@ -17,6 +17,8 @@ export class CreatecourseComponent implements OnInit {
 
   constructor(private service:ApiserviceService, private router:ActivatedRoute ) { }
   getparamid2:any;
+
+  
   
 
   

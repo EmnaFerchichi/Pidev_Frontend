@@ -135,12 +135,13 @@
              
                 <input type="text"  formControlName="name" > <span class="highlight"></span> <span class="bar"></span><label>Name</label>
             </div>
+           
             <div class="group">
-                <input type="date"  formControlName="date_d" > <span class="highlight"></span> <span class="bar"></span><label>Starting Data</label>
+                <input type="date"   ng-click="showcalendar($event)" formControlName="date_d" min='2022-05-12' max='2022-07-01' > <span class="highlight"></span> <span class="bar"></span><label>Starting Dat</label>
             </div>
             
             <div class="group">
-                <input type="date"  formControlName="date_s" > <span class="highlight"></span> <span class="bar"></span><label>Finish Date</label>
+                <input type="date" ng-click="showcalendar($event)"  min='2022-05-12' max='2022-07-01' formControlName="date_s" > <span class="highlight"></span> <span class="bar"></span><label>Finish Date</label>
             </div>
             <div class="group">
                 <input type="text"  formControlName="description" > <span class="highlight"></span> <span class="bar"></span><label>Description</label>
@@ -148,10 +149,7 @@
             <div class="group">
                 <input type="text"  formControlName="price" > <span class="highlight"></span> <span class="bar"></span><label>Enter Price</label>
             </div>
-            <div class="group">
-                <input type="file"   formControlName="image" > <span class="highlight"></span> <span class="bar"></span><label>Enter Image</label>
-            </div>
-    
+           
             
             <div class ="col-lg-4 mt-2"  *ngIf="!getparamid2">
                 <button  class="btn btn-primary btn-sm" ng-click="uploadFile(studInfo)"   role="button">Create</button>
@@ -162,7 +160,30 @@
            
             
            
-      
+              <script language="javascript">
+                angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
+                angular.module('myApp').controller('myCntrl', function ($scope) {
+                    $scope.today = function () {
+                        $scope.dt = new Date();
+                    };
+                    $scope.mindate = new Date();
+                    $scope.dateformat="MM/dd/yyyy";
+                    $scope.today();
+                    $scope.showcalendar = function ($event) {
+                        $scope.showdp = true;
+                    };
+                    $scope.showdp = false;
+                    $scope.month = function () {
+                        $scope.dt = new Date();
+                    };
+                    $scope.mindate = new Date();
+                    $scope.dateformat="MM/dd/yyyy";
+                    $scope.month();
+                    $scope.showcalendar = function ($event) {
+                        $scope.showdp = true;
+                    };
+                });
+            </script>
         </form>
 
 
