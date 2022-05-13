@@ -36,7 +36,7 @@ export class CreatecourseComponent implements OnInit {
         date_s:res.data[0].date_s,
         description:res.data[0].description,
         price:res.data[0].price,
-        image:res.data[0].image,
+        rating:res.data[0].rating,
 
 
       })
@@ -53,7 +53,8 @@ export class CreatecourseComponent implements OnInit {
     'date_s': new FormControl('',Validators.required),
     'description': new FormControl('',Validators.required),
     'price': new FormControl('',Validators.required),
-    'image': new FormControl('',Validators.required),
+    'rating': new FormControl('',Validators.required),
+
 
   });
 
@@ -86,7 +87,9 @@ export class CreatecourseComponent implements OnInit {
   }
 
   courseUpdate(){
-    console.log(this.courseForm.value,'updatedform');
+  
+    
+      
     
 
 

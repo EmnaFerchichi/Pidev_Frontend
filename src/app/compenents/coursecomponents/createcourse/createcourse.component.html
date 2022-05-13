@@ -50,7 +50,7 @@
     
     /* LABEL ======================================= */
     label 				 {
-      color:#999; 
+      color:rgb(153, 153, 153); 
       font-size:18px;
       font-weight:normal;
       position:absolute;
@@ -137,11 +137,11 @@
             </div>
            
             <div class="group">
-                <input type="date"   ng-click="showcalendar($event)" formControlName="date_d" min='2022-05-12' max='2022-07-01' > <span class="highlight"></span> <span class="bar"></span><label>Starting Dat</label>
+                <input type="date"    ng-click="showcalendar($event)"  formControlName="date_d"                                           min='2022-05-12' max='2022-06-13' > <span class="highlight"></span> <span class="bar"></span><label>Starting Dat</label>
             </div>
             
             <div class="group">
-                <input type="date" ng-click="showcalendar($event)"  min='2022-05-12' max='2022-07-01' formControlName="date_s" > <span class="highlight"></span> <span class="bar"></span><label>Finish Date</label>
+                <input type="date"   formControlName="date_s"                                                                            min='2022-05-12' max='2022-06-13' > <span class="highlight"></span> <span class="bar"></span><label>Finish Date</label>
             </div>
             <div class="group">
                 <input type="text"  formControlName="description" > <span class="highlight"></span> <span class="bar"></span><label>Description</label>
@@ -149,10 +149,13 @@
             <div class="group">
                 <input type="text"  formControlName="price" > <span class="highlight"></span> <span class="bar"></span><label>Enter Price</label>
             </div>
+            <div class="group">
+              <input type="number"  formControlName="rating" > <span class="highlight"></span> <span class="bar"></span><label>Enter Rating</label>
+          </div>
            
             
             <div class ="col-lg-4 mt-2"  *ngIf="!getparamid2">
-                <button  class="btn btn-primary btn-sm" ng-click="uploadFile(studInfo)"   role="button">Create</button>
+                <button  class="btn btn-primary btn-sm"    role="button">Create</button>
                 </div>
                 <div class ="col-lg-4 mt-2" *ngIf="getparamid2">
                   <button  class="btn btn-dark btn-sm"  (click)="courseUpdate()" role="button">Update</button>

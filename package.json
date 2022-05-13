@@ -38,6 +38,7 @@
     "ng2-order-pipe": "^0.1.5",
     "ng2-search-filter": "^0.5.1",
     "ngx-pagination": "^5.1.1",
+    "nodemailer": "^6.7.5",
     "nodemon": "^2.0.15",
     "rxjs": "~7.5.0",
     "smart-webcomponents-angular": "^14.0.8",

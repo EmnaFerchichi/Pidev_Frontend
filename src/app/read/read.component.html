@@ -89,13 +89,13 @@
         }
         
         #customers td, #customers th {
-          border: 2px solid #ddd;
+          border: 2px solid rgb(0, 0, 0);
           padding: 8px;
         }
         
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        #customers tr:nth-child(even){background-color: #a59d9d;}
         
-        #customers tr:hover {background-color: #ddd;}
+        #customers tr:hover {background-color: rgb(187, 177, 177);}
         
         #customers th {
           padding-top: 12px;
@@ -115,17 +115,18 @@
           <th>Points</th>
           <th >Title</th>
           <th >Mark</th>
+          <th>Edits</th>
           
         </tr>
         <tbody>
            <tr *ngFor="let us of readData |filter:searchText | paginate:{itemsPerPage:tableSize,currentPage:page,totalItems:count}; let i=index ">
                   
-                <th >{{us.id_qcm}}</th>
-                <td>{{us.description}}</td>
-                <td>{{us.nbr_question}}</td>
-                <td>{{us.points}}</td>
-                <td>{{us.title}}</td>
-                <td>{{us.mark}}</td>
+                <th style="color: black;" >{{us.id_qcm}}</th>
+                <td style="color: black;">{{us.description}}</td>
+                <td style="color: black;">{{us.nbr_question}}</td>
+                <td style="color: black;">{{us.points}}</td>
+                <td style="color: black;">{{us.title}}</td>
+                <td style="color: black;">{{us.mark}}</td>
                 <td>
                   <button class="btn btn-sm btn-danger"  (click)="deleteID(us.id_qcm)">Delete</button>
                   &nbsp;

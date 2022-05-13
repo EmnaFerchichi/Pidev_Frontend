@@ -1,8 +1,10 @@
+
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Qcm } from './models/quiz.model';
-const baseUrl = 'http://localhost:8096//SpringMVC/Courses';
+import { Course } from './models/course.model';
+const baseUrl = 'http://localhost:8096//SpringMVC/courses';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +12,10 @@ const baseUrl = 'http://localhost:8096//SpringMVC/Courses';
 export class ServiceCourseService {
 
   constructor(private http: HttpClient) { }
-  getAll(): Observable<Qcm[]> {
-    return this.http.get<Qcm[]>(baseUrl);
+  getAll(): Observable<Course[]> {
+    return this.http.get<Course[]>(baseUrl);
   }
-  get(id: any): Observable<Qcm> {
+  get(id: any): Observable<Course> {
     return this.http.get(`${baseUrl}/${id}`);
   }
   create(data: any): Observable<any> {
@@ -28,8 +30,8 @@ export class ServiceCourseService {
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl);
   }
-  findByTitle(title: any): Observable<Qcm[]> {
-    return this.http.get<Qcm[]>(`${baseUrl}?title=${title}`);
+  findByTitle(title: any): Observable<Course[]> {
+    return this.http.get<Course[]>(`${baseUrl}?title=${title}`);
   }
   
 

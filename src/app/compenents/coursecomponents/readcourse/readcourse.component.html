@@ -110,7 +110,7 @@ h2{
     }
     .fl-table thead th {
         text-align: left;
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid #ffffff;
     }
     .fl-table tbody tr {
         display: table-cell;
@@ -150,6 +150,7 @@ h2{
         <th>Finish Date</th>
         <th>Description</th>
         <th>Price</th>
+        <th>Rating</th>
         <th>Edits</th>
         
       </tr>
@@ -162,6 +163,7 @@ h2{
               <td>{{us.date_s}}</td>
               <td>{{us.description}}</td>
               <td>{{us.price}}</td>
+              <td>{{us.rating}}</td>
 
               <td>
                 <button class="btn btn-sm btn-danger" (click)="deleteID2(us.id)" >Delete</button>

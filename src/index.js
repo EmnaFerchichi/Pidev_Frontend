@@ -134,8 +134,9 @@ app.post("/course", (req, res) => {
   let image = req.body.image;
   let name = req.body.name;
   let price = req.body.price;
+  let rating =req.body.rating
 
-  let qr = `insert into course (date_d,date_s,description,image,name,price) values('${date_d}','${date_s}','${description}','${image}','${name}','${price}')`;
+  let qr = `insert into course (date_d,date_s,description,image,name,price,rating) values('${date_d}','${date_s}','${description}','${image}','${name}','${price}','${rating}')`;
   db.query(qr, (err, result) => {
     if (err) {
       console.log(err);
@@ -181,8 +182,10 @@ app.put("/course/:id", (req, res) => {
   let image = req.body.image;
   let name = req.body.name;
   let price = req.body.price;
+  let rating =req.body.rating
 
-  let qr = `update course set date_d='${date_d}',date_s='${date_s}',description='${description}',image='${image}',name='${name}',price='${price}'  where id=${gID}`;
+
+  let qr = `update course set date_d='${date_d}',date_s='${date_s}',description='${description}',image='${image}',name='${name}',price='${price},'${rating}''  where id=${gID}`;
   db.query(qr, (err, result) => {
     if (err) {
       console.log(err);

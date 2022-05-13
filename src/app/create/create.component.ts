@@ -76,6 +76,14 @@ export class CreateComponent implements OnInit {
 
   userUpdate(){
     console.log(this.userForm.value,'updatedform');
+    if (this.userForm.valid)
+    {
+      this.service.updateData(this.userForm.value,this.getparamid).subscribe((res)=>{
+      });
+    }else 
+    {
+      this.errormsg='all field is required';
+    }
 
 
   }
